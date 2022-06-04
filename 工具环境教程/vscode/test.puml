@@ -1,0 +1,9 @@
+
+@startuml
+   
+a -> b :AAA
+a -> b : BBB
+b -> c : aaa
+c -> a : bbb
+
+@enduml
