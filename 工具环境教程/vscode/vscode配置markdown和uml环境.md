@@ -51,5 +51,7 @@ mermaid的一大遗憾是不能画类图，相比之下，plantUML的功能更�
 ``` plantuml
 @startuml
 a -> b: hello
+b -> a: hello
+
 @enduml
 ```
