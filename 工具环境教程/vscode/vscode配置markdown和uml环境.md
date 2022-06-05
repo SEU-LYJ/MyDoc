@@ -42,11 +42,12 @@ mermaid的一大遗憾是不能画类图，相比之下，plantUML的功能更�
 * 插件中安装plantUML，该插件已经集成plantuml.jar和GraphViz，一般安装插件即可预览
 * 如果出现如下报错，则说明系统没有安装java运行环境，需要在windows中安装java并配置相关环境变量:
   * 在[此处](https://download.oracle.com/java/18/latest/jdk-18_windows-x64_bin.exe)下载jdk安装包;或者自己上网搜索适合自己系统的安装包进行安装。
-  * 如果安装后仍然报错，那么极有可能是你的用户名存在中文，vscode默认的插件安装在C:\user\用户名\.vscode\extensions下，plantUML插件如果存在中文极有可能加载失败，此时的补救办法要么就是把自己的用户名换成英文，要么就是自己把插件中的*\extensions\jebbs.plantuml-xxx\plantuml.jar换到没有中文的目录，然后在工程的settings.json中配置`"plantuml.jar":"路径加文件名"`,如`"plantuml.jar": "C:\\Program Files\\plantuml\\plantuml.jar"`
   
   ``` json
   {"errno":-4058,"code":"ENOENT","syscall":"spawn java","path":"java","spawnargs":["-Djava.awt.headless=true","-Dfile.encoding=UTF-8","-Dplantuml.include.path=D:\\我的技术文档\\工具环境教程\\vscode;C:\\Users\\刘英杰\\.mume","-jar","c:\\Users\\刘英杰\\.vscode\\extensions\\shd101wyy.markdown-preview-enhanced-0.6.3\\node_modules\\@shd101wyy\\mume\\dependencies\\plantuml\\plantuml.jar","-pipe","-tsvg","-charset","UTF-8"]}
   ```
+
+* 如果安装后仍然报错，那么极有可能是你的用户名存在中文，vscode默认的插件安装在C:\user\用户名\.vscode\extensions下，plantUML插件如果存在中文极有可能加载失败，此时的补救办法要么就是把自己的用户名换成英文，要么就是自己把插件中的*\extensions\jebbs.plantuml-xxx\plantuml.jar换到没有中文的目录，然后在工程的settings.json中配置`"plantuml.jar":"路径加文件名"`,如`"plantuml.jar": "C:\\Program Files\\plantuml\\plantuml.jar"`
 * 如果仍然无法显示plantuml内容，需要检查安装Markdown Preview Enhanced，安装完成后即可在markdown中加载uml图。如下所示：
   ![plantuml实例](res/5.jpg)
 
@@ -56,5 +57,6 @@ plantuml测试源码
 ```plantuml
 autonumber
 a -> b: hello
-b -> a: hello
+b -> c: hello
+c -> a: hello back
 ```
