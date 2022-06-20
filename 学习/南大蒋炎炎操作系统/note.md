@@ -26,7 +26,8 @@
 * 1:06:14 微内核定义图
 * 1:16:05 minix架构图
   ![minix架构图](res/1-1.jpg)
-*  
+* 1:40:50 ExoKernel，更牛逼，把操作系统抽象成基础硬件，连进程的概念都没有，只有时间片
+* 1:43:00 unikernel:libOS，不要用户态，去掉不用的系统代码，把用户代码链接到内核里面，就没有系统调用开销了,放在虚拟机里就更高效了
 #### 1.21.1.3 推荐阅读
 * [标准unix系统接口定义](https://pubs.opengroup.org)
     * XBD: Base Definitions
@@ -35,3 +36,9 @@
     * XRAT: Rationale,这个非常关键，不仅告诉“是什么”，而且告诉“为什么”
 * 《操作系统设计与实现 第二版》 下册就是代码，Andrew S. Tanenbaum,基于minix的，minix是微内核
 * [seL4 white paper](res/seL4-whitepaper.pdf)
+
+### 1.22 极限速通操作系统
+#### 1.22.2 重要知识点
+* 34:52 c语言atomic语法用法
+* 1:00:00 如何设计中断的嵌套
+* 1:22:00 信号量的原始设计
