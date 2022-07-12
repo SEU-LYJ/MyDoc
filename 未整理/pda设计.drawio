@@ -1,0 +1,46 @@
+<mxfile host="65bd71144e">
+    <diagram id="8k0pilOPhJCKsqijKYOJ" name="第 1 页">
+        <mxGraphModel dx="633" dy="1637" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="统一抽象层&lt;br&gt;&lt;ol&gt;&lt;li&gt;显示器抽象、蓝牙抽象、系统reboot抽象、线程、锁、信号量抽象、内存管理、rtc、led、震动、蜂鸣器、设备信息、文件io、扫码头、ocr&lt;/li&gt;&lt;/ol&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="160" width="530" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="RTOS&lt;br&gt;wifi、蓝牙、按键、led、spi屏、蜂鸣器、陀螺仪&lt;br&gt;little fs、kv、kmalloc、ota、低功耗、watchdog" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="280" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="LINUX&lt;br&gt;SDL、BLE、key" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="MACOS&lt;br&gt;SDL、stdlib" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="三方库：&lt;br&gt;mqtt、coap、jerry-script、qrcode、zlib、freetype、lvgl、tls、MD5、cJSON、png" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="70" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="自建库：&lt;br&gt;httpclient、kv、ocr、tracklog、memorysniff" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="70" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="基础服务：&lt;br&gt;星图、缓存加速、app-loader、事件分发管理、looper、服务总线、观察者模型、页面栈管理、时区和多语言、crash管理、iotsdk（物模型属性、事件、方法）、压测服务monkey" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="-20" width="800" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="基础数据结构&lt;br&gt;链表、队列、循环队列、map、vector" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="70" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="基础应用框架：&lt;br&gt;keypad、toast、焦点管理、页面模型生命周期、应用模型(type、name、action、config、version、url）&lt;br&gt;、profiler、json页面模型（视图、事件绑定、数据绑定）、图片及页面文件持久化缓存&lt;br&gt;渲染基础组件（重载相同组件模型）：div、text、image、list、scroller、qrcode、barcode、checkbox&lt;br&gt;布局：flexbox、相对布局、绝对布局&lt;br&gt;样式：颜色、字体、边框等css样式&lt;br&gt;渲染引擎：json描述----&amp;gt;虚拟dom树----&amp;gt;基础组件视图树----&amp;gt;真实bitmap图像&lt;br&gt;业务请求抽象：coap、星图或者标准http皆可（session维持），甚至是本地离线模拟路由&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="-200" width="830" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="JSON应用容器&lt;br&gt;container_page、工作模式、container按键事件通用处理（焦点变换、页面滚动）、异常处理（加载失败重试）、create、destroy、appear和disappear的事件关联（如扫码头）&lt;br&gt;json标准事件处理（atlas、config、end、http、js、keypad、navigation、print、ocr、upload）" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="-360" width="300" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="js小程序应用容器&lt;br&gt;视图模型（_c/_i/_l和init stylesheet）、样式管理（sheet list item与id class优先级合并）、js逻辑&lt;br&gt;加速：snapshot、初始化框架context内存冻结&lt;br&gt;MVVM watcher、条件渲染、循环渲染、异步事件、&lt;br&gt;按键事件与焦点切换视图更新&lt;br&gt;js与c的brige：tcp、http、文件系统&lt;br&gt;kv、device、埋点、ui等" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="-360" width="280" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="系统应用：&lt;br&gt;launcher（静态、动态、更多，横纵展示）&lt;br&gt;setting&lt;br&gt;启动流程&lt;br&gt;资源更新&lt;br&gt;蓝牙和wifi连接配置&lt;br&gt;通用：列表选择页面、用户确认页面&lt;br&gt;系统软件更新&lt;br&gt;其他：自动关机、扫码头亮度、声音、屏幕亮度、关于本机等等&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="660" y="-360" width="230" height="140" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
