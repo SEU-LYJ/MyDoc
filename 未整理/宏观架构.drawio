@@ -1,0 +1,46 @@
+<mxfile host="65bd71144e">
+    <diagram id="8k0pilOPhJCKsqijKYOJ" name="第 1 页">
+        <mxGraphModel dx="835" dy="1515" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;b style=&quot;font-size: 18px&quot;&gt;统一抽象层&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 12px ; font-weight: normal&quot;&gt;参考posix：线程、锁、信号量、内存、文件io、网络、时间&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 12px ; font-weight: normal&quot;&gt;设备：显示器、蓝牙操作、wifi操作、重启、震动、蜂鸣器、LED、设备信息、按键、扫码头、摄像头&lt;/span&gt;&lt;/div&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="170" width="750" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;RTOS&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 12px ; font-weight: normal&quot;&gt;系统：little fs、kmalloc、ota、低功耗、watchdog&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;外设：wifi、蓝牙、按键、led、屏幕、蜂鸣器、陀螺仪&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="280" width="380" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;LINUX&lt;/font&gt;&lt;/b&gt;&lt;br&gt;SDL、蓝牙、扫码头、语音" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="280" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;MACOS&lt;/font&gt;&lt;/b&gt;&lt;br&gt;SDL、stdlib" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="280" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;b style=&quot;font-size: 18px&quot;&gt;三方库&lt;br&gt;&lt;/b&gt;mqtt、coap、jerry-script、qrcode、zlib、freetype、lvgl、tls、MD5、cJSON、png、mongoosehttp" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="90" width="280" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;b style=&quot;font-size: 18px&quot;&gt;自建库&lt;br&gt;&lt;/b&gt;httpclient(cookie)、kv、tracklog、memory-sniff、ocr、发布订阅组件" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="90" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;b style=&quot;font-size: 18px&quot;&gt;基础服务&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 12px ; font-weight: normal&quot;&gt;事件分发管理、页面栈管理、looper、异步任务管理、lru cache manager、服务总线、&lt;/span&gt;&lt;/div&gt;&lt;/b&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;星图、iotsdk、时区和多语言、&lt;/span&gt;&lt;span&gt;crash管理、压测monkey&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="-10" width="750" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;b style=&quot;font-size: 18px&quot;&gt;基础数据结构&lt;br&gt;&lt;/b&gt;链表、队列、循环队列、map、vector" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="90" width="230" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;b style=&quot;font-size: 18px&quot;&gt;基础应用框架&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 12px ; font-weight: normal&quot;&gt;小组件：键盘、弹窗、列表选择页、对话框&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;div style=&quot;font-size: 12px ; font-weight: 400&quot;&gt;&lt;span&gt;渲染基础组件（重载相同组件模型）：div、text、image、list、scroller、qrcode、barcode、checkbox&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 12px ; font-weight: 400&quot;&gt;&lt;div&gt;&lt;span&gt;布局：flexbox、相对布局、绝对布局&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;样式：颜色、字体、边框等css样式&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;业务请求抽象：coap、星图或者标准http皆可（session维持），甚至是本地离线模拟路由&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/b&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;通用能力：焦点管理、页面模型生命周期、应用模型(type、name、action、config、version、url）、&lt;/span&gt;&lt;span&gt;profiler、图片及页面文件持久化缓存&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="-180" width="750" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;b style=&quot;font-size: 18px&quot;&gt;JSON应用容器&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 12px ; font-weight: 400&quot;&gt;&amp;nbsp; json页面模型（视图、事件绑定、数据绑定）&lt;/span&gt;&lt;span style=&quot;font-size: 12px ; font-weight: normal&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 12px ; font-weight: normal&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 12px ; font-weight: normal&quot;&gt;渲染引擎：json描述----&amp;gt;虚拟dom树----&amp;gt;基础组件视图树----&amp;gt;真实bitmap图像&lt;/span&gt;&lt;/div&gt;&lt;/b&gt;&lt;b style=&quot;font-size: 18px&quot;&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 12px ; font-weight: normal&quot;&gt;&amp;nbsp; 事件绑定：扫码、按键&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 12px ; font-weight: normal&quot;&gt;&amp;nbsp; 标准事件处理：atlas、config、end、http、&amp;nbsp; &amp;nbsp; &amp;nbsp; js、keypad、navigation、print、ocr、upload&lt;/span&gt;&lt;/div&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="-390" width="250" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;b style=&quot;font-size: 18px&quot;&gt;js小程序应用容器&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 12px ; font-weight: normal&quot;&gt;&amp;nbsp; 视图模型：（_c/_i/_l和init stylesheet）&lt;/span&gt;&lt;/div&gt;&lt;/b&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp; 样式管理（sheet list item与id class优先级合并）&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp; 加速：snapshot、初始化框架context内存冻结&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp; MVVM watcher、条件渲染、循环渲染、异步事件、&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp; 按键事件与焦点切换视图更新&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp; js与c的brige：tcp、http、文件系统、&lt;/span&gt;&lt;span&gt;kv、device、埋点、ui等&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="-390" width="290" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;b style=&quot;font-size: 18px&quot;&gt;系统应用&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 12px ; font-weight: normal&quot;&gt;&amp;nbsp; launcher（静态、动态、更多，横纵展示）&lt;/span&gt;&lt;/div&gt;&lt;/b&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp; setting&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp; 资源更新&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp; 蓝牙和wifi连接配置&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp; 系统软件更新&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp; 语言和国家设置&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;&amp;nbsp; 其他：自动关机、扫码头亮度、声音、屏幕亮度、关于本机...&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="-390" width="190" height="190" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
