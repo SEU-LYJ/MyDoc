@@ -1,10 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram id="8k0pilOPhJCKsqijKYOJ" name="第 1 页">
-        <mxGraphModel dx="933" dy="1515" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="125" dy="1490" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="统一抽象层&lt;br&gt;&lt;ol&gt;&lt;li&gt;显示器抽象、蓝牙抽象、系统reboot抽象、线程、锁、信号量抽象、内存管理、rtc、led、震动、蜂鸣器、设备信息、文件io、扫码头、ocr&lt;/li&gt;&lt;/ol&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="2" value="统一抽象层&lt;br&gt;&lt;ol&gt;&lt;li&gt;显示器抽象、蓝牙抽象、系统reboot抽象、线程、锁、信号量抽象、内存管理、rtc、led、震动、蜂鸣器、设备信息、文件io、扫码头、ocr&lt;/li&gt;&lt;li&gt;区分为posix接口（内核、网络、内存、文件系统相关，参考linux5大子系统：进程间通信、进程调度、内存管理、虚拟文件系统、网络接口）、设备特有接口（外设相关）&lt;/li&gt;&lt;/ol&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="50" y="160" width="820" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="RTOS&lt;br&gt;wifi、蓝牙、按键、led、spi屏、蜂鸣器、陀螺仪&lt;br&gt;little fs、kv、kmalloc、ota、低功耗、watchdog" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
