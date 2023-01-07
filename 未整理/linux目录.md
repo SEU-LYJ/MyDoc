@@ -18,6 +18,28 @@ drwxr-xr-x    4 root     root          4096 Dec 21 18:28 var
 binary的缩写，所有用户共享的linux命令存放位置，里面有一些基础的unix工具，如ls、which、whoami等等。
 ## dev
 device的缩写，存放的是linux设备，但是这里的设备不一定是对应一个真实的物理设备，比如在linux里面打开一个命令行终端对应的也会是一个tty设备。如：
+* 首先打开一个终端，显示/dev/pts下的设备数为2个.第6行调用tty显示当前终端就是对应的pts/0设备。
+```shell {.line-numbers}
+/ # cd /dev/pts
+/dev/pts # ls -l
+total 0
+crw--w----    1 root     tty       136,   0 Jan  7 15:44 0
+crw-rw-rw-    1 root     root        5,   2 Jan  7 15:44 ptmx
+/dev/pts # tty
+/dev/pts/0
+```
+* 再打开一个新终端，重复上述操作，显示pts设备就多了一个1.对应的正好是新的终端
+```shell {.line-numbers}
+/ # cd /dev/pts
+/dev/pts # ls -l
+total 0
+crw--w----    1 root     tty       136,   0 Jan  7 15:44 0
+crw--w----    1 root     tty       136,   0 Jan  7 15:44 1
+crw-rw-rw-    1 root     root        5,   2 Jan  7 15:44 ptmx
+/dev/pts # tty
+/dev/pts/0
+/dev/pts/1
+```
 
 
 ## etc
