@@ -51,4 +51,6 @@
 
 ![](res/pic9.jpg)
 
-![image-20230218233224932](D:\personal\study\MyDoc\生活日常\NAS\assets\image-20230218233224932.png)
+
+
+![image-20230218233432888](./assets/image-20230218233432888.png)
