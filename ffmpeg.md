@@ -4,9 +4,9 @@
   * 固定码率可以使用-b:v 4M
   * 指定分辨率可以使用 -vf scale=1280:720
 ``` 
-sudo docker run --rm --it \
+sudo docker run --rm -it \
     -v /mnt/moviePool/movie:/input  \
-    -v /mnt/moviePool/processed/temp:/ouput  \
+    -v /mnt/moviePool/processed/temp:/output  \
     linuxserver/ffmpeg  \
     -i /input/movies/input.mkv \
     -c:v libx265    \
@@ -16,9 +16,9 @@ sudo docker run --rm --it \
     /output/output.mkv 
 ```
 
-sudo docker run --rm --it \
+sudo docker run --rm -it \
     -v /mnt/moviePool/movie:/input  \
-    -v /mnt/moviePool/processed/temp:/ouput  \
+    -v /mnt/moviePool/processed/temp:/output  \
     linuxserver/ffmpeg  \
     -i /input/movies/The.Missing.Gun.2002.1080p.WEB-DL.AVC.AC3.5.1-Knight.mkv \
     -c:v libx265    \
