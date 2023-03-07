@@ -22,7 +22,23 @@ sudo docker run --rm -it \
     linuxserver/ffmpeg  \
     -i /input/movies/The.Missing.Gun.2002.1080p.WEB-DL.AVC.AC3.5.1-Knight.mkv \
     -c:v libx265    \
-    -preset veryslow    \
+    -preset slow    \
     -crf 23     \
     -c:a copy   \
     /output/output.mkv 
+
+
+我常用的脚本
+```
+sudo docker run --rm -it \
+    -v /mnt/moviePool/movie/movie:/input  \
+    -v /mnt/moviePool/movie/recode:/output  \
+    linuxserver/ffmpeg  \
+    -i /input/$1/$1.$2 \
+    -c:v libx265    \
+    -preset slow    \
+    -crf $4     \
+    -c:a copy   \
+    -c:s copy   \
+    /output/$3
+```
