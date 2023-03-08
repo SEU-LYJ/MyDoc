@@ -16,17 +16,6 @@ sudo docker run --rm -it \
     /output/output.mkv 
 ```
 
-sudo docker run --rm -it \
-    -v /mnt/moviePool/movie:/input  \
-    -v /mnt/moviePool/processed/temp:/output  \
-    linuxserver/ffmpeg  \
-    -i /input/movies/The.Missing.Gun.2002.1080p.WEB-DL.AVC.AC3.5.1-Knight.mkv \
-    -c:v libx265    \
-    -preset slow    \
-    -crf 23     \
-    -c:a copy   \
-    /output/output.mkv 
-
 
 我常用的脚本
 ```
@@ -42,3 +31,12 @@ sudo docker run --rm -it \
     -c:s copy   \
     /output/$3
 ```
+
+添加字幕
+ffmpeg -i test_1280x720_3.mp4 -i test_1280x720_3.srt -c copy output.mkv
+
+# crf设置值参考（x265编码）
+23 对于1080p 10bit的已经足够无损了
+28 对于1080p 也已经足够搞清了
+
+默认速度为slow
