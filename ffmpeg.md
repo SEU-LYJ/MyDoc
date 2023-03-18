@@ -24,17 +24,17 @@ sudo docker run --rm -it \
 
 
 我常用的脚本
-```
+``` 
 sudo docker run --rm -it \
     -v /mnt/moviePool/movie/movie:/input  \
     -v /mnt/moviePool/movie/recode:/output  \
     linuxserver/ffmpeg  \
     -i /input/$1/$1.$2 \
     -c:v libx265    \
-    -preset veryslow \
+    -preset slower \
     -crf $4     \
     -metadata:s title="" \
-    -metadata title=$3 \
+    -metadata title=$1 \
     -c:a copy   \
     -c:s copy   \
     /output/$3
@@ -53,3 +53,5 @@ ffmpeg -i test_1280x720_3.mp4 -i test_1280x720_3.srt -c copy output.mkv
 可以考虑对非特效电影默认设置fast试试
 同样速度配置下，crf设置越高（越小），文件越大
 
+
+sudo ./recode.sh 致命ID.Identity.2003.1080p.x264 mkv 致命ID.Identity.2003.1080p.x265.mkv 28

@@ -1,0 +1,2 @@
+sudo docker run -itd --name myzerotier --restart always --cap-add NET_ADMIN  --cap-add SYS_ADMIN --device /dev/net/tun --net host  zerotier/zerotier:latest
+sudo docker exec -it myzerotier zerotier-cli join 04659652f993bfa6
