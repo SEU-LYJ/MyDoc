@@ -29,7 +29,7 @@ sudo docker run -d --name onlyoffice -p 6060:80 -v /app/onlyoffice/logs:/var/log
 sudo docker run -d --name nextcloud_db -p 3306:3306 -v /usr/local/mysql/data:/var/lib/mysql -v /usr/local/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=yongyuan1994 -e MYSQL_DATABASE=nextcloud -e MYSQL_USER=nextcloud -e MYSQL_PASSWORD=nextcloud --restart=always mariadb:latest
 
 * 安装nextcloud
-sudo docker run -itd --name nextcloud -p 8080:80 -v /usr/local/nextcloud/html:/var/www/html --restart=always nextcloud
+sudo docker run -itd --name nextcloud -p 8080:80 -v /data/nextcloud/html:/var/www/html --restart=always nextcloud
 
 * 进入nextcloud，安装onlyoffice，然后再onlyoffice配置中填写上面的onlyoffice地址，类似http://192.168.1.2:6060
 如果nextcloud中安装onlyoffice插件一直不成功，尝试在宿主机先安装apache2
