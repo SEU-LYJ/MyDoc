@@ -1,13 +1,17 @@
 sudo docker pull nextcloud
 
-* 安装onlyoffice
-sudo docker run -d --name onlyoffice -p 6060:80 --restart=always onlyoffice/documentserver:7.0.1
 
 * 安装mysql
-sudo docker run -d --name nextcloud_db -p 3306:3306 -v /data/mysql/data:/var/lib/mysql -v /data/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=yongyuan1994 -e MYSQL_DATABASE=nextcloud -e MYSQL_USER=nextcloud -e MYSQL_PASSWORD=nextcloud --restart=always mariadb:latest
+sudo docker run -d --name nextcloud_db -p 3306:3306 -v /data/mysql/data:/var/lib/mysql -v /data/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=mypassword -e MYSQL_DATABASE=nextcloud -e MYSQL_USER=nextcloud -e MYSQL_PASSWORD=nextcloud --restart=always mariadb:latest
 
 * 安装nextcloud
 sudo docker run -itd --name nextcloud -p 8080:80 -v /data/nextcloud/html:/var/www/html --restart=always nextcloud
+
+* 安装collobora（如果安装这个就不需要onlyoffice）
+sudo docker run -itd --name colloboraOffice -p 9980:9980 -e username=myusername -e password=mypassword -e host=0.0.0.0 -e disable_certificate_validation=true -e extra_params='--o:ssl.enable=false' --restart always collabora/code
+
+* 安装onlyoffice
+sudo docker run -d --name onlyoffice -p 6060:80 --restart=always onlyoffice/documentserver:7.0.1
 
 * 进入nextcloud，安装onlyoffice，然后再onlyoffice配置中填写上面的onlyoffice地址，类似http://192.168.1.2:6060
 如果nextcloud中安装onlyoffice插件一直不成功，尝试在宿主机先安装apache2
