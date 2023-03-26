@@ -1,6 +1,6 @@
 sudo rsync -rv --progress /usr/local/nextcloud/ /data/nextcloud/ 将nextcloud文件夹下的内容原样传到/data/nextcloud下面，显示进度（-v）和进度条(--progress)
 
-sudo rsync -avhuL --progress {{remote_host}}:{{path/to/remote_directory}} {{path/to/local_directory}}
+sudo rsync -avhuL --progress --delete {{remote_host}}:{{path/to/remote_directory}} {{path/to/local_directory}}
 * a:相当于-rlptgoD，
   * r: 递归复制 
   * l: 拷贝符号链接
@@ -13,4 +13,4 @@ sudo rsync -avhuL --progress {{remote_host}}:{{path/to/remote_directory}} {{path
 * h：以人可读形式显示
 * u：只更新源中更新的文件到目的中
 * L：处理链接文件时，将链接指向的文件复制到文件夹
-* 
+* --delete 删除本地已经删除的文件，保持两个文件夹完全同步
